@@ -3,11 +3,11 @@ ________________________________________________________________________________
 											NEW COMPLEX FORMULA
 ____________________________________________________________________________________________________________
 
-TOTAL OF COINS: 1.000.000 (PoW Blocks) + 1% ANUAL POS FOREVER
+TOTAL OF COINS: 1.036.800 (PoW Blocks) + 1% ANUAL POS FOREVER
 
 NO PREMINE
 
-COINS PER BLOCK: 5
+COINS PER BLOCK: 4
 
-NUMBER OF BLOCKS: ? / 1440 (BLOCKS PER DAY) = 7500 DAYS / 365 (DAYS PER YEAR) = 20.54 YEARS OF MINING
+NUMBER OF BLOCKS: 4 / 1440 (BLOCKS PER DAY) = 7500 DAYS / 365 (DAYS PER YEAR) 
 
