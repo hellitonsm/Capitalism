@@ -27,23 +27,23 @@ class CRequestTracker;
 class CNode;
 
 
-static const int LAST_POW_BLOCK = 10800010;
+static const int LAST_POW_BLOCK = 259200;
 
-static const unsigned int MAX_BLOCK_SIZE = 10000000;
+static const unsigned int MAX_BLOCK_SIZE = 50000000;
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
 static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 static const unsigned int MAX_INV_SZ = 50000;
 static const int64_t MIN_TX_FEE = 1000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64_t MAX_MONEY = 90000000000 * COIN;
+static const int64_t MAX_MONEY = 1036800 * COIN;
 static const int64_t COIN_YEAR_REWARD = 1 * CENT; // 1% per year
 static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.01 * COIN;	// 1% annual interest
-static const int MODIFIER_INTERVAL_SWITCH = 10800010;
+static const int MODIFIER_INTERVAL_SWITCH = 259200;
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.
-static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
+static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC / Modify after
 
 #ifdef USE_UPNP
 static const int fHaveUPnP = true;
