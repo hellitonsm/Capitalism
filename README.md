@@ -16,8 +16,8 @@ Capitalism is released under the terms of the MIT license. See COPYING for more 
 ## Specifications
 
 Name: CAPITALISM
-Symbol: CAPS or </>
-Total coin: 1 Million 
+Symbol: CAPS or CPT
+Total coin: 1+ Million 
 Block time: 60 seconds 
 Difficulty Re-targets: Every block Confirmations on Transactions: 10 
 Maturity: 15
@@ -33,11 +33,11 @@ Proof of Developer: http://cryptoasian.com/ no
 
 ## Algorithm: X15
 
-15 ROUNDS OF SCIENTIFIC HASHING (blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo, hamsi, fugue, shabal, whirlpool). You can mine HTMLCOIN with CPU or GPU, we are ASIC RESISTANT.
+15 ROUNDS OF SCIENTIFIC HASHING (blake, bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo, hamsi, fugue, shabal, whirlpool). You can mine CAPITALISM with CPU or GPU, we are ASIC RESISTANT.
 
 ## POW Reward
-Total Block: ? 
-Block 11 - ?: 5 CAPS After block ? POS will start . 1% Annual PoS.
+Total Block: 259200 
+4 CAPS After block 259200 POS will start . 1% Annual PoS.
 
 ## Ports
 
