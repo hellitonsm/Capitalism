@@ -1,13 +1,13 @@
-Name HTMLCoin
+Name Capitalism
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 1.3.2.1
-!define COMPANY "Htmlcoin project"
-!define URL http://www.htmlcoin.com
+!define VERSION 0.0.0.1
+!define COMPANY "Capitalism Coin Project"
+!define URL http://www.capitalism.vision
 
 # MUI Symbol Definitions
 !define MUI_ICON "pixmaps\bitcoin.ico"
@@ -18,9 +18,9 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER Htmlcoin
-!define MUI_FINISHPAGE_RUN $INSTDIR\Htmlcoin-Qt.exe
-!define MUI_FINISHPAGE_RUN_TEXT "Launch HTMLCoin"
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER Capitalism
+!define MUI_FINISHPAGE_RUN $INSTDIR\Capitalism-Qt.exe
+!define MUI_FINISHPAGE_RUN_TEXT "Launch Capitalism"
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "pixmaps\nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -44,14 +44,14 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile HTMLCoin-${VERSION}-setup.exe
-InstallDir $PROGRAMFILES\Htmlcoin
+OutFile Capitalism-${VERSION}-setup.exe
+InstallDir $PROGRAMFILES\Capitalism
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion ${VERSION}
-VIAddVersionKey ProductName HTMLCoin
+VIAddVersionKey ProductName Capitalism
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -65,7 +65,7 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File ..\release\Htmlcoin-Qt.exe
+    File ..\release\Capitalism-Qt.exe
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -76,8 +76,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-	CreateShortcut "$SMPROGRAMS\$StartMenuGroup\HTMLCoin.lnk" $INSTDIR\Htmlcoin-Qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall HTMLCoin.lnk" $INSTDIR\uninstall.exe
+	CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Capitalism.lnk" $INSTDIR\Capitalism-Qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Capitalism.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -110,15 +110,15 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\Htmlcoin-Qt.exe
+    Delete /REBOOTOK $INSTDIR\Capitalism-Qt.exe
     DeleteRegValue HKCU "${REGKEY}\Components" Main
 SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall HTMLCoin.lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\HTMLCoin.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\HTMLCoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Capitalism.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Capitalism.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\Capitalism.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
@@ -126,7 +126,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "htmlcoin"
+    DeleteRegKey HKCR "Capitalism"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0
