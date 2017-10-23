@@ -28,8 +28,7 @@ UPNP Support
 
 ## Quality
 
-Proof of Developer: http://proofofdev.com/ #no
-Proof of Developer: http://cryptoasian.com/ #no
+NO
 
 ## Algorithm: X15
 
